@@ -1,0 +1,176 @@
+html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+Map{
+  buffer-size: 512;
+}
+.path_Locations[type='City'][zoom>=4]{
+  ::inner{
+    marker-fill-opacity: 1;
+    marker-fill:#2b2b2b;
+    marker-stroke-width: 0;
+    marker-opacity: 0.65;
+    marker-placement: point;
+    marker-type: ellipse;
+    marker-width: 5;
+    marker-stroke: #2b2b2b;
+    marker-allow-overlap: true;
+  }
+  ::labels {
+    text-name: [name];
+    text-face-name: "Lato Bold Italic";
+    text-size: 11;
+    text-fill: #2b2b2b;
+    text-halo-fill:fadeout(lighten(#7E9968,12),70);
+    text-halo-radius: 1.5;
+    text-placement-type: simple;
+    text-placements: "E,W,NW,NE,SE,8";
+    text-dx:-5;
+    text-dy:-4;
+    text-character-spacing: 0;
+
+      [zoom>=5]{text-size: 12;}
+      [zoom>=6]{text-size: 13;}
+      [zoom>=7]{text-size: 15;}
+  }
+}
+
+.path_Ice_Wall {
+  stroke-width: 0.25;
+  stroke: #FFF;
+  opacity: 0.5;
+  building-fill: #ffffff;
+  building-fill-opacity: 1;
+  building-height: 55000;
+}
+
+.path_Regions {
+  fill: red;
+
+}
+.path_Regions [zoom>=4] {
+  text-name: [name];
+  text-face-name: "Lato Bold Italic";
+  text-size: 11;
+  text-fill: lighten(#7E9968,35);
+  text-halo-fill: fadeout(darken(#7E9968,12),70);
+  text-halo-radius: 1.5;
+  text-allow-overlap: true;
+  text-character-spacing: 1.5;
+  text-transform: uppercase;
+
+  [zoom>=5]{
+    text-size: 12;
+    text-halo-radius: 2;
+    text-character-spacing: 3;
+  }
+
+  [zoom>=6]{
+    text-size: 14;
+    text-character-spacing: 4;
+  }
+
+  [zoom>=7]{
+    text-size: 16;
+    text-character-spacing: 6;
+  }
+}
+.path_Rivers {
+
+  [type='river']{
+    stroke-width: 1;
+    stroke: #718c9f;
+    opacity: 0.9;
+    [zoom<=4]{stroke-width: 0.5;}
+    [zoom>=6]{stroke-width: 1.5;}
+}
+
+ [type='road']{
+    ::case {
+        stroke-width: 4;
+        stroke: #3b3b3b;
+        opacity: 0.3;
+
+          [zoom<=4]{stroke-width: 0;}
+          [zoom>=6]{stroke-width: 5;}
+      }
+
+    ::fill{
+        stroke-width: 2;
+        stroke: lighten(#8C9F71,10);
+        opacity: 0.9;
+
+          [zoom<=4]{stroke-width: 0;}
+          [zoom>=6]{stroke-width: 3;}
+      }
+  }
+
+}
+.path_Mountains [type = 'mountain']{
+ polygon-pattern-file:
+url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/mamataakella/assets/20170823212836mountain-range.png');
+  polygon-pattern-opacity: 0.3;
+
+}
+.path_Mountains [type='lake'] {
+  fill: #718c9f;
+  opacity: 0.7;
+  stroke-width: 1;
+  stroke: rgba(255,255,255,0.1);
+
+}
+
+.path_Mountains [type='swamp']{
+  opacity: 0.4;
+  fill: mix(#6ea92f,#718c9f,30);
+
+}
+.path_Ice_Wall [cartodb_id=3] {
+
+  fill: #fff;
+  opacity: 0.65;
+
+}
+
+/*svg {
+  background-image:
+  url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/mamataakella/assets/20170822202613TexturesCom_PaperDecorative0061_1_seamless_S.jpg');
+
+
+}*/
+.path_Continents {
+background-image:
+url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/mamataakella/assets/20170822202613TexturesCom_PaperDecorative0061_1_seamless_S.jpg');
+
+  /*opacity: 0.4;*/
+  /*fill:mix(#6ea92f,#CCBE9A,40);*/
+  opacity: 0.8;
+  /*polygon-comp-op: multiply;*/
+  stroke-width: 5;
+  /*stroke: fadeout(#fff,85);*/
+
+  /*[zoom<=4]{stroke-width: 2.5;}*/
+
+}
+.path_Ripples {
+  stroke-width: 1;
+  stroke: #FFF;
+  opacity: 0.2;
+  line-comp-op: soft-light;
+}
