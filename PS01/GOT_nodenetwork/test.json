@@ -1,0 +1,15 @@
+{
+  "nodes":[
+    {"id": "Dorne", "group": 0},
+    {"id": "Iron Islands", "group": 2},
+    {"id": "The Crownlands", "group": 3},
+    {"id": "The Neck", "group": 4},
+    {"id": "The North", "group": 5},
+    {"id": "The Reach", "group": 6}
+  ],
+    "links":[
+      {"source": "Dorne", "target": "The North"},
+      {"source": "Iron Islands", "target": "The North"},
+      {"source": "The Crownlands", "target": "The North"},
+    ]
+}
