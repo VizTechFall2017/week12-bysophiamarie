@@ -1,0 +1,84 @@
+{
+  "The Seven Kingdoms": [{
+    "Kingdom" : "The North",
+    "Rulers": "House Stark",
+    "Capital": "Winterfell",
+    "Words": "Winter is Coming",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the North"
+  }, {
+    "Kingdom" : "The Vale of Arryn",
+    "Rulers": "House Arryn",
+    "Words":"As High as Honor",
+    "Capital": "The Eyrie",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the Mountain and the Vale"
+  }, {
+    "Kingdom" : "The Riverlands",
+    "Rulers": "Tully",
+    "Words":"Family, Duty, Honor",
+    "Capital": "Riverrun",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the Isles and Rivers"
+  }, {
+      "Kingdom" : "Valyria",
+      "Rulers": "Targaryen",
+      "Words":"Fire and Blood",
+      "Capital": "Dragonstone",
+      "Date absorbed": "1 AL",
+      "Predecessors": "Old Empire of Ghis"
+    }
+      {
+        "Kingdom" : "The Neck",
+        "Rulers": "Frey",
+        "Words":"We Stand Together",
+        "Capital": "The Twins",
+        "Date absorbed": "1 AL",
+        "Predecessors": "Kingdom of Isles and Rivers"
+        },
+     {
+    "Kingdom" : "Iron Islands",
+    "Rulers": "House Greyjoy",
+    "Capital": "Pyke",
+    "Words": "What is Dead, May Never Die",
+    "Date absorbed": "5000 BC",
+    "Predecessors": "Kingdom of the Sea"
+  }, {
+    "Kingdom" : "The Westerlands",
+    "Rulers": "House Lannister",
+    "Capital": "Casterly Rock",
+    "Words":"A Lannister Always Pays His Debts",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the Rock"
+  }, {
+    "Kingdom" : "The Crownlands",
+    "Rulers": "Queen of the Andals and the First Men",
+    "Capital": "King's Landing",
+    "Date absorbed": "1 AL",
+    "Predecessors": [
+      "Kingdom of the Isles and Rivers",
+      "Kingdom of the Stormlands"
+    ]
+  }, {
+    "Kingdom" : "The Stormlands",
+    "Rulers": "House Baratheon",
+    "Words": "Ours is the Fury",
+    "Capital": "Storm's End",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the Stormlands"
+  }, {
+    "Kingdom" : "The Reach",
+    "Rulers": "Tyrell",
+    "Capital": "Highgarden",
+    "Words": "Growing Strong",
+    "Date absorbed": "1 AL",
+    "Predecessors": "Kingdom of the Reach"
+  }, {
+    "Kingdom" : "Dorne",
+    "Rulers": "Martell",
+    "Capital": "Sunspear",
+    "Words": "Unbowed, Unbent, Unbroken",
+    "Date absorbed": "159 AL",
+    "Predecessors": "Principality of Dorne"
+  }]
+}

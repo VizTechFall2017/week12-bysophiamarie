@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game of Thrones</title>
+
+    <link rel="stylesheet" type="text/css" href="./GOT_map.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="https://cartodb.com/assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+      integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+      crossorigin=""/>
+
+      <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+  crossorigin=""></script>
+    <!-- <script src="./queue.min.js"></script> -->
+    <script src="./d3.v4.2.6.min.js"></script>
+
+</head>
+<script type="text/sql" id="query">
+      SELECT
+        *
+      FROM
+        populated_places WHERE pop_max > 700000
+</script>
+
+<script type="text/cartocss" id="style">
+      #layer {
+        marker-width: 10;
+        marker-fill: ramp([featurecla], (#5F4690, #1D6996, #38A6A5, #0F8554, #73AF48, #EDAD08, #E17C05, #CC503E, #94346E), ("Populated place", "Admin-1 capital", "Admin-0 capital", "Admin-1 region capital", "Scientific station", "Admin-0 region capital", "Admin-0 capital alt", "Historic place", "Meteorological Station"), "=");
+        marker-fill-opacity: 0.7;
+        marker-allow-overlap: true;
+        marker-line-width: 0;
+      }
+  </script>
+<body>
+    <div class="svgBox">
+        <!-- <svg width="100%" height="500px" id="svg1">
+          <defs>
+          <pattern id="pattern" patternUnits="userSpaceOnUse">
+              <image xlink:href="https://s3.amazonaws.com/com.cartodb.users-assets.production/production/mamataakella/assets/20170822202613TexturesCom_PaperDecorative0061_1_seamless_S.jpg"></image>
+          </pattern>
+        </defs>
+        </svg> -->
+    </div>
+    <div id="map"></div>
+
+
+</body>
+
+<script src="./got_map.js"></script>
+
+</html>
